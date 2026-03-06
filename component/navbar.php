@@ -1,19 +1,29 @@
-  <nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">Navbar</a>
-	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-	  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-	    <ul class="navbar-nav me-auto">
-	      <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="visually-hidden">(current)</span></a> </li>
-	      <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
-	      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
-	          <div class="dropdown-divider"></div>
-	          <a class="dropdown-item" href="#">Something else here</a> </div>
-          </li>
-	      <li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
-        </ul>
-	    <form class="d-flex my-2 my-lg-0">
-	      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-	      <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    </div>
-  </nav>
+<nav>
+    <ul class="sidebar">
+        <li onclick=closeSidebar()><a  ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>  
+        <li><a href=""> about</a></li>  
+        <li><a href=""> product</a></li>  
+        <li><a href=""> contact</a></li>
+        <li><a href="signup.php">Sign up</a></li>
+        <li><a href="login.php">Login</a></li>
+    </ul>
+    <ul>
+        <li><a href=""> WeFarm</a></li>  
+        <li class="hideOnMobile"><a href=""> about</a></li>  
+        <li class="hideOnMobile"><a href=""> product</a></li>  
+        <li class="hideOnMobile"><a href=""> contact</a></li>
+        <li class="hideOnMobile"><a href="signup.php">Sign up</a></li>
+        <li class="hideOnMobile"><a href="login.php">Login</a></li>
+        <li class="menu_button" onclick=showSidebar()><a ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+</nav>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function closeSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
